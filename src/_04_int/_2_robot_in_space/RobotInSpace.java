@@ -45,16 +45,16 @@ public class RobotInSpace extends KeyboardAdapter {
 		}
 		// 5. If the left arrow is pressed, make the Robot go left.
 		else if (keyPressed==KeyEvent.VK_LEFT){
-			rob.setAngle(90);
+			rob.setAngle(270);
 			rob.move(3);
 		}
 		// 6. If right is pressed, move the Robot right.
 		else if(keyPressed==KeyEvent.VK_RIGHT){
-			rob.setAngle(270);
+			rob.setAngle(90);
 			rob.move(3);
 		}
 		// 7. Run your program and move the Robot to R2-D2 for a surprise!
-		
+		 
 	}
 
 	private void checkIfR2D2Found() {
@@ -111,15 +111,15 @@ public class RobotInSpace extends KeyboardAdapter {
 		default:
 		}
 
-		checkIfR2D2Found();
+		checkIfR2D2Found();}
 
-	}
-
+	
 	@Override
 	public void keyReleased(KeyEvent e) {
 		switch (e.getKeyCode()) {
 		case KeyEvent.VK_UP:
-			movingForward = false;
+		System.out.println("123");
+		movingForward = false;
 			break;
 		case KeyEvent.VK_DOWN:
 			movingBackward = false;
